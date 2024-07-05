@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+      <meta http-equiv="X-UA Compatible" content="ie=edge">   
+      <title>Orange T-shirt</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+      <div class="Back">
+            <a href="index.html">
+            <i class="fas fa-arrow-left"></i>
+            </a>
+            <h5>Orange T-shirt</h5>
+      </div>
+       <section class="screen">
+      <div class="prod-con">
+            <img src="img/product3.jpg" alt="">
+            <h4 id="Orange T-shirt">Orange T-shirt</h4>
+            <div class="Go">
+            <h3><i class="fas fa-naira-sign" style="color:#333; font-size: 20px;"></i>6500</h3>
+          </div>
+      </div>   
+        <form action="https://formspree.io/f/xyzgypyl" method="POST">
+      <div class="container">
+    <h4 id="productType">Orange T-shirt</h4>
+    <label for="Size">Size:</label>
+    <select id="Size" name="Size">
+      <option value="">Select Size</option>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+      <option value="Extra Large">Extra Large</option>
+    </select>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" placeholder="Enter Quantity" name="Quantity">
+    <label>Your Phone Number:</label>
+    <input type="number" name="number" placeholder="xxx-xxxx-xxx" required>
+ <button id="sendButton" type="submit" disabled> 
+    <i class="fas fa-shopping-cart"></i>
+                  <h6>Order</h6>
+                  </button>
+  </div>
+  </form>
+      <div class="tag">
+            <i class="fas fa-tags"></i>
+            <h4 id="FS">
+                  Related product 
+            </h4>
+      </div>
+      <section class="dis-pro-container">
+            <a href="pro1.html">
+            <div class="dis-pro">
+                  <img src="img/product1.jpg" alt="">
+                  <h5>Deep green sleeves</h5>
+                    <h3><i class="fas fa-naira-sign" style="color:#333; font-size: 20px;"></i>9500</h3>
+            </div>
+            </a>
+            <a href="pro2.html">
+            <div class="dis-pro">
+                  <img src="img/product2.jpg" alt="">
+                  <h5>Deep Red T-shirt</h5>
+                 <h3><i class="fas fa-naira-sign" style="color:#333; font-size: 20px;"></i>5000</h3>
+            </div>
+            </a>
+            <a href="pro3.html">
+            <div class="dis-pro">
+                  <img src="img/product3.jpg" alt="">
+                  <h5>Orange T-shirt</h5>
+                 <h3><i class="fas fa-naira-sign" style="color:#333; font-size: 20px;"></i>6500</h3>
+            </div>
+            </a>
+      </section>
+    </section>
+      
+      
+      
+   
+    <script>
+       
+          document.querySelector('#Size').addEventListener('change', toggleButtonState);
+    document.querySelector('#quantity').addEventListener('input', toggleButtonState);
+
+    function toggleButtonState() {
+      var size = document.querySelector('#Size').value.trim();
+      var quantity = document.querySelector('#quantity').value.trim();
+      var sendButton = document.querySelector('#sendButton');
+
+      if (size !== '' && quantity !== '') {
+        sendButton.removeAttribute('disabled');
+      } else {
+        sendButton.setAttribute('disabled', 'disabled');
+      }
+    }
+
+    </script>
+</body>
+</html>
